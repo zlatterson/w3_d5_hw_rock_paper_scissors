@@ -16,13 +16,13 @@ def play_game(p1_input, p2_input, p1_name="Player 1", p2_name="Player 2"):
     player1 = Player(p1_name, p1_input)
     player2 = Player(p2_name, p2_input)
 
+    find_winner = Game.play_rps(player1.choice, player2.choice)
 
-
-    if Game.play_rps(player1.choice, player2.choice) == 1:
+    if find_winner == 1:
         winner = player1.name + " wins"
-    elif Game.play_rps(player1.choice, player2.choice) == 0:
+    elif find_winner == 0:
         winner = player2.name + " wins"
-    elif Game.play_rps(player1.choice, player2.choice) == 2:
+    elif find_winner == 2:
         winner = "Draw"
     else: winner = "Not found"
 
@@ -37,11 +37,13 @@ def play_vs_computer(p1_input, p1_name="Player 1"):
     computer_input = moves[random.randint(0,2)]
     computer = Player("Computer", computer_input)
 
-    if Game.play_rps(human.choice, computer.choice) == 1:
+    find_winner = Game.play_rps(human.choice, computer.choice)
+
+    if find_winner == 1:
         winner = human.name + " wins"
-    elif Game.play_rps(human.choice, computer.choice) == 0:
+    elif find_winner == 0:
         winner = computer.name + " wins"
-    elif Game.play_rps(human.choice, computer.choice) == 2:
+    elif find_winner == 2:
         winner = "Draw"
     else: winner = "Not found"
 
