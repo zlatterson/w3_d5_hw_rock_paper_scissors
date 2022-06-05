@@ -37,11 +37,13 @@ def play_vs_computer(p1_input, p1_name="Player 1"):
     computer_input = moves[random.randint(0,2)]
     computer = Player("Computer", computer_input)
 
-    if Game.play_rps(human.choice, computer.choice) == True:
+    if Game.play_rps(human.choice, computer.choice) == 1:
         winner = human.name + " wins"
-    elif Game.play_rps(human.choice, computer.choice) == False:
+    elif Game.play_rps(human.choice, computer.choice) == 0:
         winner = computer.name + " wins"
-    else: winner = "Draw"
+    elif Game.play_rps(human.choice, computer.choice) == 2:
+        winner = "Draw"
+    else: winner = "Not found"
 
     return render_template("index.html", title="results", winner=winner)
 
