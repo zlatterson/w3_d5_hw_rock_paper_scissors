@@ -1,0 +1,34 @@
+body{
+    background-color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2rem;
+}
+
+body > ul {
+    float:left;
+}
+
+body > ul > li{
+    list-style: none;
+    background-color: whitesmoke;
+    margin-right: 30px;
+    width: 150px;
+    line-height: 60px;
+}
+
+body > ul > li > a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+body > ul > li > a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+#win {
+    font-size: larger;
+    color: tomato;
+}

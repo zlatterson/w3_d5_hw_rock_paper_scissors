@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content%}
+<h1>Play a game</h1>
+
+<form action="/play" method="POST">
+    <label for="player 1 name">Player 1 Name</label>
+    <input type="text" name="player1_name">
+    <label for="player 1 move">Player 1 move</label>
+    <select name="player1_move">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    <br>
+    <label for="checkbox check">Play vs Computer?</label>
+    <input type="checkbox" name="checkbox_computer">
+    <br>
+
+    
+    <label for="player 2 name">Player 2 Name</label>
+    <input type="text" name="player2_name">
+    <label for="player 2 move">Player 2 move</label>
+    <select name="player2_move">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    <br>
+    <input type="submit" value="Go">
+</form>
+
+{% endblock %}

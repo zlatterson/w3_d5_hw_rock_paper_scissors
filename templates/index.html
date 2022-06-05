@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Rock, Paper, Scissors!</h1>
+{% if winner %}
+<br>
+<p1 id="win">{{winner}}</p1>
+{% else %}
+<h2>Welcome</h2>
+<p1>Rock, paper, scissors is a game that relies heavily on skill and training, in which the best player will win!</p1>
+{%endif%}
+
+    
+{% endblock %} 
